@@ -1,0 +1,164 @@
+$primary-color: #334862;
+$border-color :#d1d4d8;
+$title-color :#777;
+$item-color:#334862;
+$background:#00000024;
+
+@mixin font ($font-size, $font-weight, $line-height) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+} 
+
+//Task
+.type-1815 {
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: 'Lato';
+    color: $primary-color;
+    .col_inner {
+        padding-top: 20px;
+        //Main Title
+        .title {
+            @include font(17px, 600, 1.5);
+            color: $title-color;
+            letter-spacing: 0.3px;
+            opacity: 0.9;
+            text-transform: uppercase;
+        }
+        .border-title {
+            background: $background;
+            width: 36px;
+            height: 3px;
+        }
+
+        //List Menu
+        .accordion {
+            &_item {
+                border-bottom: 1px solid $border-color;
+                //Main Menu
+                &_title {
+                    padding: 10px 0px 10px 0px;
+                    color: $item-color;
+                    display: block;
+                    transition: all ease 0.2s;
+                    & .btn_toggle {
+                        position: absolute;
+                        font-size: 35px;
+                        left: 3%;
+                        top: 10%;
+                        opacity: 0.6;
+                    }
+                    //Menu hover
+                    &:hover {
+                        text-decoration: none; 
+                        color: #111111;
+                    }
+                }
+                &:last-child {
+                    border-bottom: none;
+                    margin-bottom: 30px;
+                } 
+            }
+
+            //Sub Menu
+            &_inner {
+                padding: 0px 50px 3px 30px;
+                display: block;
+                @include font(16px, 500, 1.4);
+                color: #333;
+                border-left: 1px solid $border-color;
+                margin-bottom: 5px;
+                & .dis-block {
+                    display: block;
+                }
+            }
+
+            //Button
+            .panel-title-main {
+                @include font(19px, 500, 1.4);
+                letter-spacing: 0.2px;
+                color: #334862;
+                display: block;
+                opacity: 0.8;
+                &:hover {
+                    color: black;
+                    text-decoration: none;
+                    transition: 0.2s;
+                }
+            }
+            .panel-title a {
+                @extend .panel-title-main;
+                position: relative;
+                padding: 10px 0px 10px 0px;
+                &.collapsed::after,
+                &::after {
+                  content: "\f107";
+                  font-family: fontawesome;
+                  font-size: 20px;
+                  line-height: 60px;
+                  position: absolute;
+                  right: 10px;
+                  top: -8px;
+                  color: #888;
+                  opacity: 0.8;
+                }
+              
+                &:after {
+                  content: "\f106 ";
+                }
+            }
+        }
+
+        // Product Filter List
+        .product {
+            margin-bottom: 25px;
+            &_item {
+                border-bottom: 1px solid $border-color;
+                //Product
+                .item {
+                    font-size: 19px;
+                    font-weight: 500;
+                    line-height: 1.4;
+                    letter-spacing: 0.2px;
+                    position: relative;
+                    padding: 10px 0px 5px 0px;
+                    color: $item-color;
+                    display: inline-block;
+                    opacity: 0.8;
+                    text-decoration: none;
+                }
+
+                //Number of Filterable products
+                .count {
+                    float: right;
+                    margin-right: 3%;
+                    margin-top: 17px;
+                    font-size: 15px;
+                    opacity: 0.7;
+                }
+            }
+        }
+
+        //Filter by Price
+        .slidecontainer {
+            width: 100%;
+            margin-bottom: 50px;
+            margin-top: 10px;
+            input {
+                overflow: visible;
+                margin-bottom: 10px;
+            }
+        }
+    }   
+}
+
+
+
+
+
+
+  
+ 
+  
+

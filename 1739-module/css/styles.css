@@ -1,0 +1,139 @@
+.type-1739 {
+  font-family: 'Montserrat'; }
+  .type-1739 .title {
+    padding-top: 20px; }
+    .type-1739 .title .section_title {
+      text-transform: uppercase;
+      font-size: 23px;
+      font-weight: bold;
+      line-height: normal;
+      border-bottom: 2px solid #0000001a;
+      padding-bottom: 7px;
+      opacity: 0.8; }
+      .type-1739 .title .section_title_main {
+        position: relative; }
+        .type-1739 .title .section_title_main::before {
+          position: absolute;
+          content: '';
+          bottom: -9px;
+          width: 100%;
+          height: 0;
+          border-bottom: 2px solid #5a4d4d; }
+    .type-1739 .title_lead {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.4;
+      padding: 25px 0px 20px 0px;
+      color: #777777; }
+  .type-1739 .accordion_item_title {
+    padding: 10px 30px 10px 50px;
+    color: #777777;
+    display: block;
+    border-top: 1px solid #ddd;
+    transition: all ease 0.2s;
+    position: relative; }
+    .type-1739 .accordion_item_title .btn_toggle {
+      position: absolute;
+      font-size: 35px;
+      left: 3%;
+      top: 10%;
+      opacity: 0.6; }
+    .type-1739 .accordion_item_title:hover {
+      text-decoration: none;
+      color: #111111; }
+  .type-1739 .accordion_item .accordion_inner {
+    padding: 10px 25px 30px 50px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #333; }
+  .type-1739 .accordion_item .panel-title a {
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+    padding-left: 30px;
+    position: relative; }
+    .type-1739 .accordion_item .panel-title a:hover {
+      color: #444;
+      text-decoration: none; }
+    .type-1739 .accordion_item .panel-title a.collapsed::after, .type-1739 .accordion_item .panel-title a::after {
+      content: "\f107";
+      font-family: fontawesome;
+      font-size: 20px;
+      line-height: 60px;
+      position: absolute;
+      left: 5px;
+      top: -8px;
+      color: #888;
+      opacity: 0.8; }
+    .type-1739 .accordion_item .panel-title a:after {
+      content: "\f106 "; }
+  .type-1739 .accordion_item .panel-heading.active {
+    background-color: rgba(0, 0, 0, 0.03); }
+    .type-1739 .accordion_item .panel-heading.active .accordion_item_title {
+      font-size: 19px;
+      font-weight: 500;
+      color: #11519b; }
+.type-1739 .form label {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  display: block;
+  width: 100%;
+  color: #222;
+  margin-bottom: 5px; }
+.type-1739 .form input {
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  padding: 0 0.75em;
+  height: 2.507em;
+  font-size: 0.97em;
+  border-radius: 0;
+  max-width: 100%;
+  width: 100%;
+  vertical-align: middle;
+  background-color: #fff;
+  color: #333;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); }
+  .type-1739 .form input:focus {
+    box-shadow: 0 0 5px #ccc;
+    opacity: 1 !important;
+    outline: 0;
+    color: #333;
+    background-color: #fff; }
+.type-1739 .form textarea {
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  padding: 0 0.75em;
+  height: 130px;
+  font-size: 0.97em;
+  border-radius: 0;
+  max-width: 100%;
+  width: 100%;
+  vertical-align: middle;
+  background-color: #fff;
+  color: #333;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); }
+  .type-1739 .form textarea:focus {
+    box-shadow: 0 0 5px #ccc;
+    opacity: 1 !important;
+    outline: 0;
+    color: #333;
+    background-color: #fff; }
+.type-1739 .form .submit {
+  width: 20%;
+  background: #446084;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold; }
+  .type-1739 .form .submit:hover {
+    box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.2); }
+.type-1739 .form p {
+  margin-top: 25px; }
+.type-1739 .text {
+  margin-top: 30px;
+  color: #333;
+  font-size: 15px;
+  letter-spacing: -0.1px; }

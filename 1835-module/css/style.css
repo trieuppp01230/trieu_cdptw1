@@ -1,0 +1,66 @@
+.type-1835 {
+  font-family: 'Lato';
+  color: #555555; }
+  .type-1835 .col-inner {
+    padding: 20px 0px 40px 0px; }
+    .type-1835 .col-inner .img img {
+      width: 50%;
+      overflow: hidden; }
+    .type-1835 .col-inner h3 {
+      color: #555555;
+      padding: 10px 0px;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.4;
+      opacity: 0.9; }
+    .type-1835 .col-inner p {
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 1.4;
+      margin-bottom: 30px;
+      opacity: 0.8;
+      letter-spacing: 0.5px; }
+    .type-1835 .col-inner span {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.4;
+      text-transform: uppercase;
+      display: inline-block;
+      transition: opacity 0.3s, transform 0.3s;
+      transform: translateX(10px); }
+    .type-1835 .col-inner .button {
+      position: relative;
+      color: #11519b;
+      border: 2px solid #11519b;
+      background-color: transparent;
+      padding: 10px 15px;
+      border-radius: 99px; }
+      .type-1835 .col-inner .button i {
+        opacity: 0;
+        font-size: 15px; }
+      .type-1835 .col-inner .button:hover {
+        background-color: #11519b; }
+        .type-1835 .col-inner .button:hover::before {
+          position: absolute;
+          content: '';
+          background-color: #11519b;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          border-radius: 99px; }
+        .type-1835 .col-inner .button:hover i {
+          opacity: 1;
+          transition: 0.4s;
+          color: #fff; }
+        .type-1835 .col-inner .button:hover span {
+          color: #fff;
+          transform: translateX(0px); }
+  .type-1835 .box-shadow-hover {
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s, opacity 0.3s; }
+    .type-1835 .box-shadow-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 0px 30px 40px 0px rgba(0, 0, 0, 0.2); }
+  .type-1835 .text-center {
+    text-align: center; }

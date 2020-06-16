@@ -1,0 +1,193 @@
+$primary-color: #f1f1f1;
+$bg-color : #000000a1;
+$white : #fff;
+
+@mixin font ($font-size, $font-weight, $line-height) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+}
+
+//Task
+.type-1771 {
+    font-family: 'Labo';
+    position: relative;
+    height: 100%;
+
+    // Insert Background Image
+    .wp_image {
+        background-image: url('../images/background.jpg');
+        background-size: cover!important;
+        background-repeat: no-repeat!important;
+        background-position: 50% 50%;
+        height: 525px;
+        position: relative;
+        &::before {
+            content: '';
+            background-color: $bg-color;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+    }
+    
+    // Show Posts Element
+    .col_inner {
+        margin-top: 35px;
+
+        //Main title
+        .title {
+            @include font(27px, 700, 1.2);
+            color: $white;
+            text-transform: uppercase;
+        }
+
+        //Sub title
+        .lead {
+            @include font(21px, 500, 1.2);
+            color: $primary-color;
+            padding-top: 25px;
+            letter-spacing: 0.7px;
+        }
+
+        //List Element
+        .list {
+            padding-top: 40px;
+            // Element
+            &_check {
+                padding: 7px 0;
+                margin: 0;
+                border-bottom: 1px solid #ececec;
+                color: $primary-color;
+                @include font(16px, 400, 1.6);
+            }
+
+            //show icon
+            .fa-check {
+                padding-right: 10px;
+                color: #7a9c59;
+            }
+        }
+    }
+
+    // Related Images
+    .swiper-container {
+        position: relative;
+        width: 100%;
+        height: 450px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+        
+        // Image effects when hover
+        &:hover{
+            //Information
+            p{
+                opacity: 1;
+                background-color: #d26e4b;
+            }
+            .box-swiper {
+                transform: translateY(-20px);
+                transition: all ease 0.4s;
+            }
+
+            //Button next
+            .swiper-button-next {
+                opacity: 0.8;
+                transition: 0.4s;
+                transform: translate3d(5px, -10px, 2px);
+            }
+
+            //Button prev
+            .swiper-button-prev {
+                opacity: 0.8;
+                transition: 0.4s;
+                transform: translate3d(-5px, -10px, 2px);
+            }
+        }
+    }
+    
+    .swiper-slide {
+        position: relative;
+        text-align: center;
+        font-size: 18px;
+        background: $white;
+    
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        .box-swiper {
+            position: absolute;
+            top: 60%;
+            text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+            transition: background-color .3s,opacity .3s;
+            transform: translateY(0px);
+            transition: all ease 0.4s;
+            p {
+                display: inline-block;
+                border-radius: 2px;
+                padding: 2px 5px;
+                font-size: 13px;
+                color: $white;
+                opacity: 0.7;
+                line-height: 1.2;
+                text-transform: uppercase;
+                background-color: rgba(0,0,0,.4);
+            }
+            h5 {
+                margin: 10px 0px;
+                color: $white;
+                font-size: 30px;
+                font-weight: 700;
+            }
+            span {
+                color: $primary-color;
+            }
+        }
+    }
+
+    //Use Swiper button
+    .swiper-button-next {
+        font-size: 15px;
+        width: 40px;
+        height: 40px;
+        border: 1px solid black;
+        border-radius: 50%;
+        opacity: 0;
+        transition: 0.4s;
+        &:after {
+            content: 'next';
+            font-size: 15px;
+            color: black;
+        }
+    }
+    
+    .swiper-button-prev {
+        @extend .swiper-button-next;
+        &:after {
+            content: 'prev';
+            @extend .swiper-button-next:after;
+        }
+    }
+    
+    img {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+}
+
+
+
+
+

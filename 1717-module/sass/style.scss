@@ -1,0 +1,141 @@
+$primary-color : #555555;
+$background-color : #11519b;
+$color-hover: #0a0a0a;
+$transform: uppercase;
+$align : center;
+
+@mixin size ($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin font ($font-size, $font-weight) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
+
+//Task
+.type-1717 {
+    font-family: 'Lato';
+    //Main Title
+    .title h2 {
+        @include font(30px, bold);
+        color: $primary-color;
+        font-weight: bold;
+        text-transform: $transform;
+        padding-top: 10px;
+    }
+
+    // Menu
+    .nav_menu {
+        padding-top: 25px;
+        padding-bottom: 5px;
+        //List Menu
+        &_list {
+            &_item {
+                padding-right: 10px;
+                @include font(15px, 600);
+                float: left;
+                text-decoration: none;
+                text-transform: $transform;
+                color: $primary-color;
+                
+                &_link {
+                    color: $primary-color;
+                    position: relative;
+                    opacity: 0.8;
+                    transition: all ease 0.3s;
+                    &.active {
+                        text-decoration: none;
+                        color: $color-hover;
+                        &::before {
+                            opacity: 1;
+                            width: 100%;
+                        }
+                    }
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        background: $background-color;
+                        top: -8px;
+                        left: 50%;
+                        height: 3px;
+                        width: 0%;
+                        opacity: 0;
+                        transform: translateX(-50%);
+                        transition: all ease 0.3s;
+                    }
+                    &:hover {
+                        text-decoration: none;
+                        color: $color-hover;
+                        &::before {
+                            opacity: 1;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    //Show Product List
+    .category {
+        padding-top: 30px;
+        &_list {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        //Product Information
+        &_item {
+            width: 25%;
+            float: left;
+            padding: 0px 15px;
+            padding-bottom: 25px;
+            text-align: $align;
+            //image product
+            &_img {
+                @include size(100%, 185px);
+                margin-bottom: 15px;
+            }
+
+            //infor product
+            &_name {
+                @include font(12px, 700);
+                color: $primary-color;
+                line-height: 1.3;
+                margin-bottom: 4px;
+                text-transform: $transform;
+                opacity: 0.8;
+            }
+            &_detail {
+                @include font(10px, 500);
+                color: $primary-color;
+                line-height: 1.2;
+                text-transform: $transform;
+                text-align: $align;
+                opacity: 0;
+            }
+            .link {
+                text-decoration: none;
+                &:hover {
+                    .detail {
+                        opacity: 1;
+                        transition: all ease 1s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
